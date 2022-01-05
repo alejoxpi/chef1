@@ -73,7 +73,11 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "chef-repo/cookbooks"
     chef.add_recipe "apache"
-  #  chef.add_recipe "php"
+    # chef.add_recipe "yum"
+    # chef.add_recipe "yum-remi-chef"
+    # chef.add_recipe "yum-epel"
+    # chef.add_recipe "ondrej_ppa_ubuntu"
+    chef.add_recipe "php"    
     chef.arguments = "--chef-license accept"
     chef.install = false
   end
