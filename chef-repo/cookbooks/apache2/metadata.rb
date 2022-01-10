@@ -8,7 +8,7 @@ license          'Apache-2.0'
 description      'Installs and configures apache2'
 version          '8.14.1'
 
-depends 'yum-epel'
+#depends 'yum-epel'
 
 supports 'debian'
 supports 'ubuntu'
