@@ -20,7 +20,7 @@
     "arch": ">= 0.0.0"
   },
   "dependencies": {
-    //"yum-epel": ">= 0.0.0"
+    "yum-epel": ">= 0.0.0"
   },
   "providing": {
 

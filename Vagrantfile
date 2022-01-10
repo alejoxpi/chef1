@@ -74,9 +74,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "chef-repo/cookbooks"
     chef.add_recipe "apache2"    
-    chef.add_recipe "mysql"
-    chef.add_recipe "php"
-    chef.add_recipe "wordpress"
+    #chef.add_recipe "mysql"
+    ##chef.add_recipe "php"
+    #chef.add_recipe "wordpress"
     chef.arguments = "--chef-license accept"
     chef.install = false
   end
