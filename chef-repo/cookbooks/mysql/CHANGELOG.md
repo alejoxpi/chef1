@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 11.0.1 - *2022-01-08*
+
+- resolved cookstyle error: test/cookbooks/test/libraries/helpers.rb:14:31 convention: `Style/FileRead`
+- resolved cookstyle error: test/cookbooks/test/libraries/helpers.rb:26:31 convention: `Style/FileRead`
+
 ## 11.0.0 - *2021-09-16*
 
 - resolved cookstyle error: libraries/mysql_service_base.rb:44:20 refactor: `Chef/Modernize/UseChefLanguageSystemdHelper`
