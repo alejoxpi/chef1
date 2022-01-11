@@ -3,7 +3,7 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
+  name: chef_solo
 
 verifier:
   name: inspec
@@ -14,6 +14,8 @@ platforms:
 
 suites:
   - name: default
+    run_list:
+      - recipe[recipes/default]
     verifier:
       inspec_tests:
         - test/integration/default
