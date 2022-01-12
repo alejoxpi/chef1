@@ -4,7 +4,7 @@ driver:
 
 provisioner:
   name: chef_solo
-  cookbooks_path: './'
+  cookbooks_path: '../'
 
 verifier:
   name: inspec
@@ -16,10 +16,9 @@ platforms:
 suites:
   - name: my
     run_list:      
-      #- recipe[line::default]
-      #- recipe[apparmor::default]
-      - recipe[apache2::default]
+      - recipe[apparmor::default]
+      - recipe[mysql::default]
     verifier:
       inspec_tests:
-        - path: apache2/test/integration/default
+        - path: test/integration/default
     attributes:

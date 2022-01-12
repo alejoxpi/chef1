@@ -4,13 +4,13 @@ control 'service' do
   
     case os[:family]
     when 'debian', 'suse'
-      describe service('mysql') do
+      describe service('apache2') do
         it { should be_installed }
         it { should be_enabled }
         it { should be_running }
       end
     else
-      describe service('mysqld') do
+      describe service('httpd') do
         it { should be_installed }
         it { should be_enabled }
         it { should be_running }

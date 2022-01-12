@@ -1,6 +1,6 @@
 control 'service' do
     impact 1
-    desc 'Apache2 service is running'
+    desc 'MySQL service is running'
   
     case os[:family]
     when 'debian', 'suse'
@@ -10,7 +10,7 @@ control 'service' do
         it { should be_running }
       end
     else
-      describe service('mysqld') do
+      describe service('mysql') do
         it { should be_installed }
         it { should be_enabled }
         it { should be_running }

@@ -4,23 +4,22 @@ driver:
 
 provisioner:
   name: chef_solo
+  cookbooks_path: './'
 
-#cookbook 'yum-epel', path: '../yum-epel/recipes'
-#cookbook 'apache2', path: './recipes'
+cookbook 'apache2', path: 'apache2/recipes'
 
 verifier:
   name: inspec
 
 platforms:
   - name: ubuntu-18.04
-  #- name: ubuntu/bionic64
   #- name: centos-8
 
 suites:
-  - name: apa
-    run_list:
+  - name: default
+    run_list:            
       - recipe[apache2::default]
     verifier:
       inspec_tests:
-        - path: test/integration/default
+        - path: apache2/test/integration/default
     attributes:
