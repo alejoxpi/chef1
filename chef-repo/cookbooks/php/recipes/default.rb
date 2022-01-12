@@ -16,8 +16,6 @@ package 'php-mysql' do
     notifies :restart, "service[apache2]"
 end
 
-#####
-
 package 'php-curl' do
     action :install
     notifies :restart, "service[apache2]"
