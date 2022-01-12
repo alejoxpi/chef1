@@ -1,0 +1,8 @@
+#cookbook 'apache2', path: './cookbooks/apache2/recipes'
+
+#- name: centos-8
+
+
+#verifier:
+      #inspec_tests:
+        - test
